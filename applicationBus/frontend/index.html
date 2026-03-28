@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Gestion Bus</h1>
+
+    <!-- LOGIN -->
+    <div class="card">
+        <h2>Connexion</h2>
+        <input id="username" placeholder="Nom d'utilisateur">
+        <input id="password" type="password" placeholder="Mot de passe">
+        <button onclick="login()">Se connecter</button>
+        <p id="loginMessage"></p>
+    </div>
+
+    <!-- BUS -->
+    <div class="card">
+        <h2>Bus</h2>
+        <button onclick="getBus()">Voir tous les bus</button>
+        <ul id="busList"></ul>
+        <h3>Ajouter un bus</h3>
+        <input id="busNumero" placeholder="Numéro">
+        <input id="busCapacite" type="number" placeholder="Capacité">
+        <button onclick="addBus()">Ajouter</button>
+    </div>
+
+    <!-- CHAUFFEUR -->
+    <div class="card">
+        <h2>Chauffeurs</h2>
+        <button onclick="getChauffeurs()">Voir tous les chauffeurs</button>
+        <ul id="chauffeurList"></ul>
+        <h3>Ajouter un chauffeur</h3>
+        <input id="chauffeurNom" placeholder="Nom">
+        <input id="chauffeurSalaire" type="number" placeholder="Salaire">
+        <input id="chauffeurBusId" type="number" placeholder="Bus ID">
+        <button onclick="addChauffeur()">Ajouter</button>
+    </div>
+
+    <!-- CONTROLEUR -->
+    <div class="card">
+        <h2>Contrôleurs</h2>
+        <button onclick="getControleurs()">Voir tous les contrôleurs</button>
+        <ul id="controleurList"></ul>
+        <h3>Ajouter un contrôleur</h3>
+        <input id="controleurNom" placeholder="Nom">
+        <input id="controleurSalaire" type="number" placeholder="Salaire">
+        <input id="controleurBusId" type="number" placeholder="Bus ID">
+        <button onclick="addControleur()">Ajouter</button>
+    </div>
+
+    <!-- DEPENSES -->
+    <div class="card">
+        <h2>Dépenses</h2>
+        <button onclick="getDepenses()">Voir toutes les dépenses</button>
+        <ul id="depenseList"></ul>
+        <h3>Ajouter une dépense</h3>
+        <input id="depenseNom" placeholder="Nom">
+        <input id="depenseMontant" type="number" placeholder="Montant">
+        <button onclick="addDepense()">Ajouter</button>
+    </div>
+
+    <!-- FINANCE -->
+    <div class="card">
+        <h2>Finance</h2>
+        <button onclick="getFinance()">Voir le bénéfice</button>
+        <p id="finance"></p>
+    </div>
+
+    <!-- HISTORIQUE -->
+    <div class="card">
+        <h2>Historique complet</h2>
+        <button onclick="getHistorique()">Afficher l'historique</button>
+        <pre id="historique"></pre>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
